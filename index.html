@@ -8,49 +8,97 @@
   <script src="https://use.fontawesome.com/c571131ce1.js"></script> <!-- font awesome -->
 
   <style>
-  body{
-    background-color: #222;
-    color: rgb(128,128,128);
+
+  body {
+  	background-color: #222;
+  	color: rgb(128,128,128);
+	padding-top:70px;
+
+}
+
+
+@media (max-width: 1000px) {
+    .navbar-header {
+        float: none;
+    }
+    .navbar-left,.navbar-right {
+        float: none !important;
+    }
+    .navbar-toggle {
+        display: block;
+    }
+    .navbar-collapse {
+        border-top: 1px solid transparent;
+        box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+    }
+    .navbar-fixed-top {
+		top: 0;
+		border-width: 0 0 1px;
+	}
+    .navbar-collapse.collapse {
+        display: none!important;
+    }
+    .navbar-nav {
+        float: none!important;
+		margin-top: 7.5px;
+	}
+	.navbar-nav>li {
+        float: none;
+    }
+    .navbar-nav>li>a {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .collapse.in{
+  		display:block !important;
+	}
 }
   </style>
 </head>
 
-<body></body>
+<body>
 
-  <nav class="navbar navbar-inverse">
-    <div class="container-fluid">
-      <!-- Brand and toggle get grouped for better mobile display -->
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <img class="navbar-brand" src="img/logo.png" >
-      </div>
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+  		<div class="navbar-header">
+    		<a class="navbar-brand">lhajder.github.io</a>
+    		<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+      			<span class="icon-bar"></span>
+      			<span class="icon-bar"></span>
+      			<span class="icon-bar"></span>
+    		</button>
+  		</div>
+  		<div class="navbar-collapse collapse">
+    		<ul class="nav navbar-nav">
+      			<li class="active"><a href="#">Home</a></li>
+      			<li><a href="#projects">Projects</a></li>
+      			<li><a href="#music">Music</a></li>
+    		</ul>
+    		<div class="navbar-header navbar-right" style="padding-right:20px;">
+    		<ul class="nav navbar-nav">
+  			<li><a href="http://www.facebook.com/leohajder" target="_blank"><span class="fa fa-facebook-official"></span></a></li>
+          	<li><a href="http://www.youtube.com/c/LeoHajder" target="_blank"><span class="fa fa-youtube-play"></span></a></li>
+          	<li><a href="http://www.linkedin.com/in/leohajder" target="_blank"><span class="fa fa-linkedin-square"></span></a></li>
+          	<li><a href="http://github.com/lhajder" target="_blank"><span class="fa fa-github-square"></span></a></li>
+          	<li><a href="http://http://www.last.fm/user/leohajder" target="_blank"><span class="fa fa-lastfm-square"></span></a></li>
+          	<li><a href="mailto:leohajder@gmail.com"><span class="fa fa-envelope-o"></span></a></li>
+          	</ul>
+  			</div>
+  		</div>
+	</nav>
 
-      <!-- Collect the nav links, forms, and other content for toggling -->
-      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <ul class="nav navbar-nav">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#music">Music</a></li>
-        </ul>
-        <ul class="nav navbar-nav navbar-right social">
-          <li><a href="http://www.facebook.com/leohajder" target="_blank"><span class="fa fa-facebook-official"></span></a></li>
-          <li><a href="http://www.youtube.com/c/LeoHajder" target="_blank"><span class="fa fa-youtube-play"></span></a></li>
-          <li><a href="http://www.linkedin.com/in/leohajder" target="_blank"><span class="fa fa-linkedin-square"></span></a></li>
-          <li><a href="http://github.com/lhajder" target="_blank"><span class="fa fa-github-square"></span></a></li>
-          <li><a href="mailto:leohajder@gmail.com"><span class="fa fa-envelope-o"></span></a></li>
-        </ul>
-        </ul>
-      </div><!-- /.navbar-collapse -->
-    </div><!-- /.container-fluid -->
-  </nav>
+
+
+
+
+
+
+
+
+
+
+  
 
 <!-- content divs -->
-<div class="main">
 
 <div id="home" class="container-fluid">
   This is me. This is me. This is me. This is me. This is me. This is me. This is me. This is me. This is me. This is me. This is me. This is me. This is me. This is me. This is me. This is me. This is me. This is me. This is me. This is me. This is me. This is me. This is me. This is me. This is me. This is me.
@@ -67,7 +115,6 @@
   I is guitarist. I is guitarist. I is guitarist. I is guitarist. I is guitarist. I is guitarist. I is guitarist. I is guitarist. I is guitarist. I is guitarist. I is guitarist. I is guitarist. I is guitarist. I is guitarist. I is guitarist. I is guitarist. I is guitarist. I is guitarist. I is guitarist. I is guitarist.
 </div>
 
-</div>
 <!-- end of content divs -->
 
 
