@@ -1,398 +1,124 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="shortcut icon" href="img/favicon.ico">
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="img/favicon.ico">
     <title>Leo Hajder</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body data-spy="scroll" data-target=".navbar">
-
-    <!-- navigation -->
     <nav class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
+        <div class="container inverse">
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#home">leohajder.github.io</a>
+                <a class="navbar-brand" href="#bio">leohajder.github.io</a>
             </div>
-            <div>
-                <div class="collapse navbar-collapse" id="navigation">
-                    <ul class="nav navbar-nav">
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#development">Development</a></li>
-                        <li><a href="#music">Music</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </div>
+            <div class="collapse navbar-collapse" id="navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="#bio">Bio</a></li>
+                    <li><a href="#development">Development</a></li>
+                    <li><a href="#music">Music</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
             </div>
         </div>
     </nav>
-    <!-- end of navigation -->
-
-    <!-- home -->
-    <div id="home" class="section fullscreen text-center center-block container">
-        <div class="title">
-            <i class="fa fa-terminal" aria-hidden="true"> home</i>
-            <div class="subtitle">
-                About me
+    <div class="container">
+        <div id="bio" class="section">
+            <div class="section-padding"></div>
+            <h1>Bio</h1>
+            <div class="container">
+                <a href="img/leo.jpg" target="_blank">
+                    <img id="me" class="img img-circle" src="img/leo.jpg" height="150">
+                </a>
+                <p>
+                    My name is Leo Hajder. I am a 29 year old programmer, developer, musician and audio producer from Split, Croatia. I work as a junior backend developer at <a href="http://web.burza.hr/" target="_blank">web.burza</a> in Zagreb, Croatia.
+                    My main area of work is object-oriented programming in web application development.
+                </p>
+                <p>
+                    I know <strong>Python</strong> <small>+ Django, Tkinter</small>, <strong>C#</strong> <small>+ Windows Forms, ASP.Net MVC</small>, <strong>PHP</strong> <small>+ Symfony, Sylius</small>, <strong>JavaScript</strong> <small>+ jQuery, AJAX, Handlebars.js</small>,
+                    <strong>HTML</strong> <small>+ CSS, Bootstrap</small>, <strong>SQL</strong> <small>+ MySQL, Microsoft SQL Server, SQLite</small>, <strong>Git</strong>, etc.
+                </p>
+                <p>
+                    I volunteer at the Cerebral Palsy association <a href="http://www.facebook.com/udruga.srce" target="_blank">Srce</a> in Split, Croatia. Our goal is the social integration of our members, improving their quality of life, organizing
+                    their free time, and participating in various art projects. Some of my tasks are guitar playing, video and audio content editing, assisting in project organization, social media promotion, etc.
+                </p>
+                <p>
+                    In my spare time I do music production and composing. I record, mix, produce and play guitar in local bands. I have also done a soundtrack for a documentary. I have participated in the <a href="http://deanrodneysingers.com/" target="_blank">Dean Rodney Singers</a>                    project, hosted by a London based company <a href="http://www.heartnsoul.co.uk/" target="_blank">Heart N Soul</a>, which brings musicians and artists with and without disabilities together to collaborate on creating artistic content.
+                    Our work was on display at the 2012 Summer Paralympics in London, UK.
+                </p>
+                <p>
+                    <img src="https://leohajder.github.io/img/cae.jpg" height="40" alt="Cambridge English: Advanced (CAE)">
+                    <a href="https://www.youracclaim.com/badges/4fbde96e-cd6b-48d1-8af1-38cf88980272/public_url" target="_blank">
+                        <img src="https://acclaim-production-app.s3.amazonaws.com/images/3ca8dd3f-ff4e-4961-b423-46ab9bcb053c/MTA%2BSoftware%2BDevelopment%2BFundamentals-01.png" height="40" alt="MTA Software Development Fundamentals">
+                    </a>
+                    <a href="https://www.youracclaim.com/badges/818714e2-b7e3-4e54-a222-38af196d340f/public_url" target="_blank"><img src="https://acclaim-production-app.s3.amazonaws.com/images/7b186204-144b-4d7c-99d2-fef259500220/e3b2ef746594ace57b855a3aed8adc9f831dc09d.png" height="40" alt="ClearFit Innovator"></a>
+                </p>
             </div>
         </div>
-        <!-- end of title -->
-
-        <div class="content">
-            <img src="img/leo.jpg" alt="Leo Hajder" class="img img-responsive img-circle center-block">
-            <div class="row">
-                <div class="col-xs-12">
-                    <p>
-                        My name is Leo Hajder. I am a 29 year old programmer, developer, musician and audio producer from Split, Croatia. I work as a junior backend developer at <a href="http://web.burza.hr/" target="_blank">Web.Burza</a> in Zagreb, Croatia.
-                    </p>
-                    <p>
-                        I am good at object-oriented programming, web development, algorithm and data structure modeling and problem solving. I have learned <strong>Python</strong> (+ Django, Tkinter), <strong>C#</strong> (+ Windows Forms, ASP.Net, ASP.Net
-                        MVC), <strong>PHP</strong> (+ Symfony, Sylius), <strong>JavaScript</strong> (+ jQuery, AJAX), <strong>HTML</strong> (+ CSS, Bootstrap), <strong>SQL</strong>, <strong>Git</strong>, etc, and I'm constantly looking to learn and progress.
-                        I've also obtained the <strong>MTA Software Development Fundamentals</strong> and the <strong>Cambridge English: Advanced (CAE)</strong> certificates.
-                        <!-- <a href="https://www.youracclaim.com/badges/4fbde96e-cd6b-48d1-8af1-38cf88980272/public_url" target="_blank"><img id="badge-mta" class="img img-responsive center-block" src="img/badge-mta.png"></a> -->
-                    </p>
-                    <p>
-                        I am very enthusiastic, eager to learn, open minded, friendly, outgoing and adaptive. I can switch between working in a team and on my own, while trying to be as professional and as thorough as I can be with any given task.
-                    </p>
-                    <p>
-                        I volunteer at the local Cerebral Palsy association <a href="http://www.facebook.com/udruga.srce" target="_blank">Srce</a> in Split, Croatia. Our major goal is the social integration of people who suffer from cerebral palsy and
-                        authism, as well as improving their quality of life, organizing their free time, and participating in other activities such as concerts, musicals and other art projects. Some of the tasks I do are guitar playing, video and audio
-                        content editing, assisting in project organization, social media promotion, etc.
-                    </p>
-                    <p>
-                        In my spare time I do music production and composing. I record, mix, produce and play guitar in local bands. I have also done a soundtrack for a documentary. All with an alternative approach, using mostly free software.
-                    </p>
+        <div id="development">
+            <div class="section-padding"></div>
+            <h1>Development</h1>
+            <script id="repos-template" type="text/x-handlebars-template">
+                <div class="container">
+                    <div class="row">
+                        {{#repos}}
+                        <div class="col-xs-12">
+                            <a href="{{html_url}}" target="_blank"><h2>{{name}}</h2></a> <small>{{language}}</small>
+                            <div class="col-xs-12">
+                                {{description}} {{#if homepage}} View <a href="{{homepage}}" target="_blank">live</a>. {{/if}}
+                            </div>
+                        </div>
+                        {{/repos}}
+                    </div>
                 </div>
-                <!-- end of col -->
-            </div>
-            <!-- end of row -->
+            </script>
         </div>
-        <!-- end of content -->
+        <div id="music">
+            <div class="section-padding"></div>
+            <h1>Music</h1>
+            <div class="container">
+                <iframe src="https://www.youtube.com/embed/videoseries?list=PLEC1A7D5D8F5E7203" frameborder="0"></iframe>
+                <iframe src="https://www.youtube.com/embed/Xme5P55xZJw" frameborder="0" allowfullscreen></iframe>
+                <iframe src="https://www.youtube.com/embed/videoseries?list=PL392EC9FEC6CDE8DE" frameborder="0"></iframe>
+                <iframe src="https://www.youtube.com/embed/videoseries?list=PL81F245C0FDAF7513" frameborder="0"></iframe>
+                <iframe src="https://www.youtube.com/embed/videoseries?list=PL8D71B82E74CAB164" frameborder="0"></iframe>
+                <iframe src="https://www.youtube.com/embed/Sl40IYO6KB0" frameborder="0"></iframe>
+                <iframe src="https://www.youtube.com/embed/ikIlgcc2YSY" frameborder="0"></iframe>
+                <iframe src="https://www.youtube.com/embed/SqwKEa3m8LU" frameborder="0"></iframe>
+            </div>
+        </div>
+        <div id="contact">
+            <div class="section-padding"></div>
+            <h1>Contact</h1>
+            <div class="container">
+                <a href="https://leohajder.github.io" target="_blank"><i class="fa fa-globe" aria-hidden="true"><span class="hidden-xs"> web</span></i></a>
+                <a href="mailto:leohajder@gmail.com" target="_blank"><i class="fa fa-envelope-o" aria-hidden="true"><span class="hidden-xs"> email</span></i></a>
+                <a href="https://github.com/leohajder" target="_blank"><i class="fa fa-github" aria-hidden="true"><span class="hidden-xs"> github</span></i></a>
+                <a href="https://www.freecodecamp.com/leohajder" target="_blank"><i class="fa fa-free-code-camp" aria-hidden="true"><span class="hidden-xs"> freecodecamp</span></i></a>
+                <a href="http://www.linkedin.com/in/leohajder" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"><span class="hidden-xs"> linkedin</span></i></a>
+                <a href="https://www.facebook.com/leohajder" target="_blank"><i class="fa fa-facebook" aria-hidden="true"><span class="hidden-xs"> facebook</span></i></a>
+                <a href="https://www.youtube.com/c/LeoHajder" target="_blank"><i class="fa fa-youtube-play" aria-hidden="true"><span class="hidden-xs"> youtube</span></i></a>
+                <a href="http://www.last.fm/user/leohajder" target="_blank"><i class="fa fa-lastfm" aria-hidden="true"><span class="hidden-xs"> last.fm</span></i></a>
+            </div>
+        </div>
     </div>
-    <!-- end of home -->
-
-    <!-- development -->
-    <div id="development" class="section fullscreen text-center center-block container">
-        <div class="title">
-            <i class="fa fa-terminal" aria-hidden="true"> development</i>
-            <div class="subtitle">
-                Coding projects
-            </div>
-        </div>
-        <!-- end of title -->
-
-        <div class="content">
-
-            <div class="row">
-
-                <div class="col-md-4 col-sm-6 col-xs-12">
-                    <!-- Drive -->
-                    <div class="col-xs-12">
-                        <img src="img/drive.png" alt="Drive" class="img img-responsive center-block">
-                        <h4>Drive</h4>
-                        <p>
-                            My take on the classic arcade racing game written in C# using the Game SDK engine. View on <a href="https://github.com/leohajder/drive" target="_blank">GitHub</a>.
-                        </p>
-                    </div>
-                </div>
-                <!-- end of Drive -->
-
-                <div class="col-md-4 col-sm-6 col-xs-12">
-                    <!--Boxing Champ -->
-                    <div class="col-xs-12">
-                        <img src="img/boxingchamp.png" alt="Boxing Champ" class="img img-responsive center-block">
-                        <h4>Boxing Champ</h4>
-                        <p>
-                            A two player boxing game written in BYOB. View on <a href="https://github.com/leohajder/boxing-champ" target="_blank">GitHub</a>.
-                        </p>
-                    </div>
-                </div>
-                <!-- end of Boxing Champ -->
-                <div class="clearfix visible-sm-block"></div>
-
-                <div class="col-md-4 col-sm-6 col-xs-12">
-                    <!-- Calculator -->
-                    <div class="col-xs-12">
-                        <img src="img/calculator.png" alt="Calculator" class="img img-responsive center-block">
-                        <h4>Calculator</h4>
-                        <p>
-                            A simple calculator application written in Python 3.5.2 using the Tkinter module for GUI programming. View on <a href="https://github.com/leohajder/calculator" target="_blank">GitHub</a>.
-                        </p>
-                    </div>
-                </div>
-                <!-- end of Calculator -->
-
-                <div class="col-md-4 col-sm-6 col-xs-12">
-                    <!--Writer -->
-                    <div class="col-xs-12">
-                        <img src="img/writer.png" alt="Writer" class="img img-responsive center-block">
-                        <h4>Writer</h4>
-                        <p>
-                            A simple text editor application written in Python 3.5.2 using the Tkinter module for GUI programming. View on <a href="https://github.com/leohajder/writer" target="_blank">GitHub</a>.
-                        </p>
-                    </div>
-                </div>
-                <!-- end of Writer -->
-
-                <div class="col-md-4 col-sm-6 col-xs-12">
-                    <!-- Becker -->
-                    <div class="col-xs-12">
-                        <img src="img/becker.png" alt="Jason Becker tribute" class="img img-responsive center-block">
-                        <h4>Jason Becker tribute page</h4>
-                        <p>
-                            An assignment for <a href="https://www.freecodecamp.com/" target="_blank">FreeCodeCamp</a>. View on <a href="https://codepen.io/leohajder/full/JKQrmE" target="_blank">Codepen</a>.
-                        </p>
-                    </div>
-                </div>
-                <!-- end of Becker -->
-
-                <div class="col-md-4 col-sm-6 col-xs-12">
-                    <!--leohajder.github.io -->
-                    <div class="col-xs-12">
-                        <img src="img/portfolio.png" alt="Leo Hajder portfolio" class="img img-responsive center-block">
-                        <h4>leohajder.github.io</h4>
-                        <p>
-                            This site is hosted on GitHub for free. To do this, put the contents of your site in a repository named <strong>&lt;your_username&gt;.github.io</strong> and push. More info <a href="https://pages.github.com/" target="_blank">here</a>.
-                            View my repository on <a href="https://github.com/leohajder/leohajder.github.io" target="_blank">GitHub</a>.
-                        </p>
-                    </div>
-                </div>
-                <!-- end of leohajder.github.io -->
-
-                <div class="col-md-4 col-sm-6 col-xs-12">
-                    <!-- ROT13 -->
-                    <div class="col-xs-12">
-                        <img src="img/rot13.png" alt="ROT13" class="img img-responsive center-block">
-                        <h4>ROT13</h4>
-                        <p>
-                            An assignment for <a href="https://www.freecodecamp.com/" target="_blank">FreeCodeCamp</a>. More about ROT13 <a href="https://en.wikipedia.org/wiki/ROT13" target="_blank">here</a>. View on <a href="https://github.com/leohajder/rot13"
-                                target="_blank">GitHub</a>. Live on <a href="http://codepen.io/leohajder/full/YGydgB" target="_blank">Codepen</a>.
-                        </p>
-                    </div>
-                </div>
-                <!-- end of ROT13 -->
-
-                <div class="col-md-4 col-sm-6 col-xs-12">
-                    <!--Quote -->
-                    <div class="col-xs-12">
-                        <img src="img/quote.png" alt="Quote" class="img img-responsive center-block">
-                        <h4>Quote</h4>
-                        <p>
-                            An assignment for <a href="https://www.freecodecamp.com/" target="_blank">FreeCodeCamp</a>. Users can get random quotes from the <a href="http://forismatic.com/en/api/" target="_blank">Forismatic API</a> and tweet them out.
-                            View on <a href="https://github.com/leohajder/quote" target="_blank">GitHub</a>. Live on <a href="http://codepen.io/leohajder/full/vXNQgx" target="_blank">Codepen</a>.
-                        </p>
-                    </div>
-                </div>
-                <!-- end of Quote -->
-
-                <div class="col-md-4 col-sm-6 col-xs-12">
-                    <!--SayIt -->
-                    <div class="col-xs-12">
-                        <img src="img/sayit.png" alt="SayIt" class="img img-responsive center-block">
-                        <h4>SayIt</h4>
-                        <p>
-                            A bassic comments app written in PHP, testing the the Symfony framework basic concepts. View on <a href="https://github.com/leohajder/say-it" target="_blank">GitHub</a>.
-                        </p>
-                    </div>
-                </div>
-                <!-- end of SayIt -->
-                <div class="clearfix visible-lg-block"></div>
-                <div class="clearfix visible-md-block"></div>
-
-                <div class="col-md-4 col-sm-6 col-xs-12">
-                    <!-- Weather -->
-                    <div class="col-xs-12">
-                        <img src="img/weather.png" alt="Weather" class="img img-responsive center-block">
-                        <h4>Weather</h4>
-                        <p>
-                            An assignment for <a href="https://www.freecodecamp.com/" target="_blank">FreeCodeCamp</a>. Users can get local weather reports. <a href="http://freegeoip.net/" target="_blank">FreeGeoIP API</a> gets the location, and <a href="https://openweathermap.org/"
-                                target="_blank">OpenWeatherMap API</a> gets the weather report. The data is requested via AJAX. View on <a href="https://github.com/leohajder/weather" target="_blank">GitHub</a>. Live on <a href="http://codepen.io/leohajder/full/OpVZqb"
-                                target="_blank">Codepen</a>.
-                        </p>
-                    </div>
-                </div>
-                <!-- end of Weather -->
-
-            </div>
-            <!-- end of row -->
-
-        </div>
-        <!-- end of content -->
-
-    </div>
-    <!-- end of development -->
-
-
-    <!-- music -->
-    <div id="music" class="section fullscreen text-center center-block container">
-        <div class="title">
-            <i class="fa fa-terminal" aria-hidden="true"> music</i>
-            <div class="subtitle">
-                Bands and production
-            </div>
-        </div>
-        <!-- end of title -->
-
-        <div class="content">
-
-            <div class="row">
-
-                <div class="col-md-4 col-sm-6 col-xs-12">
-                    <!-- Electric Chair -->
-                    <div class="col-xs-12">
-                        <iframe src="https://www.youtube.com/embed/videoseries?list=PLEC1A7D5D8F5E7203" class="center-block"></iframe>
-                        <h4>Electric Chair</h4>
-                        <p>
-                            My previous thrash/heavy/prog metal band which is no longer active, but I wanted to share the music. Download the 2009 demo <strong>Just for You</strong> for free <a href="http://db.tt/lnlccdiE" target="_blank">here</a>. Like
-                            us on <a href="http://www.facebook.com/electricchairband" target="_blank">Facebook</a>.
-                        </p>
-                    </div>
-                </div>
-                <!-- end of Electric Chair -->
-
-                <div class="col-md-4 col-sm-6 col-xs-12">
-                    <!--Winter Rage -->
-                    <div class="col-xs-12">
-                        <iframe src="https://www.youtube.com/embed/yEPP_y5-6fg" class="center-block"></iframe>
-                        <h4>Winter Rage</h4>
-                        <p>
-                            A melodic epic folk metal band from Split, Croatia. I have mixed and produced the song <strong>Curse of the Fallen</strong>.
-                        </p>
-                    </div>
-                </div>
-                <!-- end of Winter Rage -->
-                <div class="clearfix visible-sm-block"></div>
-
-                <div class="col-md-4 col-sm-6 col-xs-12">
-                    <!-- Sentinel's Wounds -->
-                    <div class="col-xs-12">
-                        <iframe src="https://www.youtube.com/embed/Sl40IYO6KB0" class="center-block"></iframe>
-                        <h4>Sentinels's Wounds</h4>
-                        <p>
-                            A young melodic death metal band from Split, Croatia. I have mixed and produced the song <strong>Soulless</strong>. Like them on <a href="http://www.facebook.com/SentinelsWoundsOfficial" target="_blank">Facebook</a>.
-                        </p>
-                    </div>
-                </div>
-                <!-- end of Sentinels's Wounds -->
-                <div class="clearfix visible-lg-block"></div>
-                <div class="clearfix visible-md-block"></div>
-
-                <div class="col-md-4 col-sm-6 col-xs-12">
-                    <!--Kopito -->
-                    <div class="col-xs-12">
-                        <iframe src="https://www.youtube.com/embed/ikIlgcc2YSY" class="center-block"></iframe>
-                        <h4>Kopito</h4>
-                        <p>
-                            A rock/funk/reaggae/ethno band from Vis, Croatia. I have done some basic video editing for the official video for the song <strong>Pacencija</strong>. Like them on <a href="https://www.facebook.com/kopito.band" target="_blank">Facebook</a>.
-                        </p>
-                    </div>
-                </div>
-                <!-- end of Kopito -->
-
-                <div class="col-md-4 col-sm-6 col-xs-12">
-                    <!-- Od srca -->
-                    <div class="col-xs-12">
-                        <iframe src="https://www.youtube.com/embed/Xme5P55xZJw" class="center-block"></iframe>
-                        <h4>Od srca</h4>
-                        <p>
-                            I have done the soundtrack for the documentary about <a href="http://www.facebook.com/udruga.srce" target="_blank">Srce</a> (the Cerebral Palsy Association from Split, Croatia, where I'm a volunteer) by <strong>Matko Petrić</strong>.
-                            Find out more and like us on <a href="http://www.facebook.com/udruga.srce" target="_blank">Facebook</a>.
-                        </p>
-                    </div>
-                </div>
-                <!-- end of Od srca -->
-
-                <div class="col-md-4 col-sm-6 col-xs-12">
-                    <!--Romano Sole -->
-                    <div class="col-xs-12">
-                        <iframe src="https://www.youtube.com/embed/c4svdlLKw9Q" class="center-block"></iframe>
-                        <h4>Romano Sole</h4>
-                        <p>
-                            The mandolin tracks for the album <strong>Dalmatinski Soul</strong> were recorded in my home studio. Like him on <a href="https://www.facebook.com/ROMANO-SOLE-726453700717744" target="_blank">Facebook</a>.
-                        </p>
-                    </div>
-                </div>
-                <!-- end of Romano Sole -->
-                <div class="clearfix visible-lg-block"></div>
-                <div class="clearfix visible-md-block"></div>
-                <div class="clearfix visible-sm-block"></div>
-
-                <div class="col-md-4 col-sm-6 col-xs-12">
-                    <!-- Dean Rodney Singers -->
-                    <div class="col-xs-12">
-                        <iframe src="https://www.youtube.com/embed/videoseries?list=PL8D71B82E74CAB164" class="center-block"></iframe>
-                        <h4>Dean Rodney Singers</h4>
-                        <p>
-                            I have participated in the <a href="http://deanrodneysingers.com/" target="_blank">Dean Rodney Singers</a> project, hosted by a London based company <a href="http://www.heartnsoul.co.uk/" target="_blank">Heart N Soul</a>, which
-                            brings musicians and artists with and without disabilities together to collaborate on creating artistic content. Our work was on display at the 2012 Summer Paralympics in London, UK.
-                        </p>
-                    </div>
-                </div>
-                <!-- end of Dean Rodney Singers -->
-
-            </div>
-            <!-- end of row -->
-
-        </div>
-        <!-- end of content -->
-
-    </div>
-    <!-- end of music -->
-
-    <!-- contact -->
-    <div id="contact" class="section text-center center-block container">
-        <div class="title">
-            <i class="fa fa-terminal" aria-hidden="true"> contact</i>
-            <div class="subtitle">
-                Email and links
-            </div>
-        </div>
-        <!-- end of title -->
-
-        <div class="content">
-            <ul>
-                <li><a href="https://www.facebook.com/leohajder" target="_blank"><i class="fa fa-facebook"> facebook</i></a></li>
-                <li><a href="http://www.youtube.com/c/leohajder" target="_blank"><i class="fa fa-youtube-play"> YouTube</i></a></li>
-                <li><a href="http://github.com/leohajder" target="_blank"><i class="fa fa-github"> GitHub</i></a></li>
-                <li><a href="http://www.linkedin.com/in/leohajder" target="_blank"><i class="fa fa-linkedin"> LinkedIn</i></a></li>
-                <li class="clearfix visible-xs-block"></li>
-                <li><a target="_blank" href="http://www.last.fm/user/leohajder"><i class="fa fa-lastfm"> last.fm</i></a></li>
-                <li><a href="https://codepen.io/leohajder" target="_blank"><i class="fa fa-codepen"> CodePen</i></a></li>
-                <li><a href="https://www.freecodecamp.com/leohajder" target="_blank"><i class="fa fa-free-code-camp"> freeCodeCamp</i></a></li>
-                <li><a href="mailto:leohajder@gmail.com" target="_blank"><i class="fa fa-envelope-o"> email</i></a></li>
-            </ul>
-
-            <div class="footer subtitle">
-                <i class="fa fa-copyright" aria-hidden="true"></i> Leo Hajder 2016 - 2017
-            </div>
-        </div>
-        <!-- end of content -->
-
-    </div>
-    <!-- end of contact -->
-
+    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src='https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.min.js'></script>
     <script src="https://use.fontawesome.com/e89e59ee90.js"></script>
-
-    <!-- close dropdown navigation on click  -->
-    <script>
-        $(document).on('click', '.navbar-collapse.in', function(e) {
-            if ($(e.target).is('a') && $(e.target).attr('class') != 'dropdown-toggle') {
-                $(this).collapse('hide');
-            }
-        });
-    </script>
-
+    <script src="main.js"></script>
 </body>
 
 </html>
