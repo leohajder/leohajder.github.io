@@ -1,10 +1,18 @@
 # leohajder.github.io
 
-My CV and portfolio. It features [Bootstrap](http://getbootstrap.com/), [FontAwesome](http://fontawesome.io/) icons, [Handlebars.js](http://handlebarsjs.com/) and AJAX.
+My personal website with a short CV, portfolio and social media links.
+
+## Resources
+
+* [Bootstrap](http://getbootstrap.com/)
+* [Bootswatch](https://bootswatch.com/)
+* [FontAwesome](http://fontawesome.io/)
+* [GitHub API](https://developer.github.com/v3/)
+* [Handlebars.js](http://handlebarsjs.com/)
 
 ## How does it work?
 
-My GitHub repositories are fetched via AJAX and passed to a Handlebars.js template.
+An AJAX request gets the JSON data from GitHub, which gets passed to a Handlebars.js template.
 
 ## How to create your own GitHub page?
 

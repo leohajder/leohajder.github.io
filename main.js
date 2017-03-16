@@ -8,10 +8,10 @@ $(function() {
             var viewData = {
                 repos: response
             }; //the JSON response from the GitHub API is unnamed, so I did this to make it easy to loop with Handlebars.js
-            $("#development").append(template(viewData));
+            $("#projects").append(template(viewData));
         },
         error: function() {
-            $("#development").append("Sorry, something went wrong.");
+            $("#projects").append("Sorry, something went wrong.");
         }
     });
 });
