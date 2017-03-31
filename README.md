@@ -9,6 +9,7 @@ My personal website with a short CV, portfolio and social media links.
 * [FontAwesome](http://fontawesome.io/)
 * [GitHub API](https://developer.github.com/v3/)
 * [Handlebars.js](http://handlebarsjs.com/)
+* [jQuery](https://jquery.com/)
 
 ## How does it work?
 
