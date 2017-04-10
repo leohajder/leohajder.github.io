@@ -27,8 +27,8 @@
             </div>
             <div class="collapse navbar-collapse" id="navbar-collapse">
                 <ul class="nav navbar-nav">
-                    <li><a href="#bio">Bio</a></li>
-                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#about">About Me</a></li>
+                    <li><a href="#projects">GitHub</a></li>
                     <li><a href="#music">Music</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
@@ -38,9 +38,9 @@
 
     <div class="container">
 
-        <div id="bio" class="section">
+        <div id="about">
             <div class="section-padding"></div>
-            <h1 class="page-header">Bio</h1>
+            <h1 class="page-header">About Me</h1>
             <div class="container">
                 <a href="img/leo.jpg" target="_blank">
                     <img id="me" class="img img-circle pull-left" src="img/leo.jpg" height="150">
@@ -61,7 +61,7 @@
             </div>
         </div>
 
-        <div id="certificates" class="section">
+        <div id="certificates">
             <div class="section-padding"></div>
             <div class="container">
                 <img src="img/cae.png" height="40" title="Cambridge English: Advanced (CAE)">
@@ -72,17 +72,17 @@
 
         <div id="projects">
             <div class="section-padding"></div>
-            <h1 class="page-header">Projects</h1>
+            <h1 class="page-header">GitHub</h1>
             <script id="repos-template" type="text/x-handlebars-template">
                 <div class="container">
                     <div class="row">
                         {{#repos}}
                         <div class="col-xs-12">
-                            <a href="{{html_url}}" target="_blank"><span class="label label-primary">{{name}}</span></a>
-                            {{#if language}}
-                                <span class="label label-default">{{language}}</span>
+                            <a href="{{html_url}}" target="_blank">{{name}}</a>
+                    {{#if language}}
+                            <small>{{language}}</small>
                             {{/if}}
-                            <div class="col-xs-12">
+                            <div class="col-xs-12 repo-description">
                                 {{description}}
                                 {{#if homepage}}
                                     View <a href="{{homepage}}" target="_blank">live</a>.

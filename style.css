@@ -6,6 +6,14 @@
     padding: 10px;
 }
 
+.repo-description {
+    padding: 2px 0 6px 10px;
+}
+
+small {
+    color: #fff;
+}
+
 #contact {
     padding-bottom: 20px;
 }
