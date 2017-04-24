@@ -81,12 +81,13 @@
                             <a href="{{html_url}}" target="_blank">{{name}}</a>
                     {{#if language}}
                             <small>{{language}}</small>
+                            {{#if homepage}}
+                                <a href="{{homepage}}" target="_blank"><i class="fa fa-globe"></i></a>
+                            {{/if}}
                             {{/if}}
                             <div class="col-xs-12 repo-description">
                                 {{description}}
-                                {{#if homepage}}
-                                    View <a href="{{homepage}}" target="_blank">live</a>.
-                                {{/if}}
+                                
                             </div>
                         </div>
                         {{/repos}}
