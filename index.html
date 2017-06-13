@@ -45,7 +45,13 @@
                     <img id="me" class="img img-circle pull-left" src="img/leo.jpg" height="150">
                 </a>
                 <p>
-                    My name is Leo Hajder. I am a 29 year old programmer, musician and audio producer from Split, Croatia.
+                    My name is Leo Hajder. I am a
+                    <span id="age">
+                        <script id="age-template" type="text/x-handlebars-template">
+                            {{age}}
+                        </script>
+                    </span>
+                    year old programmer, musician and audio producer from Split, Croatia.
                 </p>
                 <p>
                     Whether in college or on my own, I have learned <strong class="text-success">PHP</strong> <small class="text-warning">+ Symfony</small>, <strong class="text-success">Python</strong> <small class="text-warning">+ Django, Tkinter</small>, <strong class="text-success">C#</strong> <small class="text-warning">+ Windows Forms, ASP.Net MVC</small>, <strong class="text-success">JavaScript</strong> <small class="text-warning">+ jQuery, AJAX, Handlebars.js</small>,
@@ -76,11 +82,14 @@
                         {{#repos}}
                         <div class="col-xs-12">
                             <a href="{{html_url}}" target="_blank">{{name}}</a>
-                    {{#if language}}
-                            <small>{{language}}</small>
+                            {{#if language}}
+                                <small>{{language}}</small>
+                            {{/if}}
+                            {{#if fork}}
+                                <i class="fa fa-code-fork"></i>
+                            {{/if}}
                             {{#if homepage}}
                                 <a href="{{homepage}}" target="_blank"><i class="fa fa-globe"></i></a>
-                            {{/if}}
                             {{/if}}
                             <div class="col-xs-12 repo-description">
                                 {{description}}
