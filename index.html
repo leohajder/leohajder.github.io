@@ -48,14 +48,35 @@
                     My name is Leo Hajder. I am a
                     <span id="age">
                         <script id="age-template" type="text/x-handlebars-template">
-                            {{age}}
+                            {{age}} year old 
                         </script>
                     </span>
-                    year old programmer, musician and audio producer from Split, Croatia.
+                    programmer, musician and audio producer from Split, Croatia.
                 </p>
                 <p>
-                    Whether in college or on my own, I have learned <strong class="text-success">PHP</strong> <small class="text-warning">+ Symfony</small>, <strong class="text-success">Python</strong> <small class="text-warning">+ Django, Tkinter</small>, <strong class="text-success">C#</strong> <small class="text-warning">+ Windows Forms, ASP.Net MVC</small>, <strong class="text-success">JavaScript</strong> <small class="text-warning">+ jQuery, AJAX, Handlebars.js</small>,
-                    <strong class="text-success">HTML</strong> <small class="text-warning">+ CSS, Bootstrap</small>, <strong class="text-success">SQL</strong>, <strong class="text-success">Git</strong>, etc.
+                    Whether in college or on my own, I have learned 
+                    <span id="skills">
+                        <script id="skills-template" type="text/x-handlebars-template">
+                            {{#skills}}
+                                <strong class="text-success">{{skill}}</strong>
+                                {{#if subsets}}
+                                    <small class="text-warning">
+                                    + 
+                                    {{#subsets}}
+                                        {{this}}
+                                        {{#unless @last}}
+                                        , 
+                                        {{/unless}}
+                                    {{/subsets}}
+                                    </small> 
+                                {{/if}}
+                                {{#unless @last}}
+                                , 
+                                {{/unless}}
+                            {{/skills}}
+                        </script>
+                    </span>
+                    etc.
                 </p>
                 <p>
                     I am a volunteer at <a href="http://www.facebook.com/udruga.srce" target="_blank">Srce</a>, a local cerebral palsy association in Split, Croatia. Our goal is the social integration of our members, improving their quality of life, organizing their free time, and participating in various art projects. Some of my tasks are guitar playing, video and audio content editing, assisting in project organization, social media promotion, etc.
@@ -103,16 +124,13 @@
 
         <div id="music" class="section">
             <h1 class="page-header">Music</h1>
-            <div class="container">
-                <iframe src="https://www.youtube.com/embed/videoseries?list=PLEC1A7D5D8F5E7203" frameborder="0"></iframe>
-                <iframe src="https://www.youtube.com/embed/Xme5P55xZJw" frameborder="0" allowfullscreen></iframe>
-                <iframe src="https://www.youtube.com/embed/videoseries?list=PL392EC9FEC6CDE8DE" frameborder="0"></iframe>
-                <iframe src="https://www.youtube.com/embed/videoseries?list=PL81F245C0FDAF7513" frameborder="0"></iframe>
-                <iframe src="https://www.youtube.com/embed/videoseries?list=PL8D71B82E74CAB164" frameborder="0"></iframe>
-                <iframe src="https://www.youtube.com/embed/Sl40IYO6KB0" frameborder="0"></iframe>
-                <iframe src="https://www.youtube.com/embed/ikIlgcc2YSY" frameborder="0"></iframe>
-                <iframe src="https://www.youtube.com/embed/SqwKEa3m8LU" frameborder="0"></iframe>
-            </div>
+            <script id="music-template" type="text/x-handlebars-template">
+                <div class="container">
+                    {{#urls}}
+                        <iframe src="{{this}}" frameborder="{{frameBorder}}"></iframe>
+                    {{/urls}}
+                </div>
+            </script>
         </div>
 
         <div id="contact" class="section">
