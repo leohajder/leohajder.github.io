@@ -6,8 +6,8 @@ iframe {
     padding: 4px;
 }
 
-small {
-    color: #fff;
+#github small, #about strong {
+    color: #ccc;
 }
 
 .section {
@@ -25,4 +25,3 @@ small {
 #certificates {
     padding: 10px;
 }
-
