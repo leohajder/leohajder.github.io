@@ -6,7 +6,8 @@ iframe {
     padding: 4px;
 }
 
-#github small, #about strong {
+#github small,
+#about strong {
     color: #ccc;
 }
 
