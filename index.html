@@ -8,157 +8,19 @@
     <link rel="shortcut icon" href="img/favicon.ico">
     <title>Leo Hajder</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.7/cyborg/bootstrap.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="min/css/style.min.css">
 </head>
 
 <body data-spy="scroll" data-target=".navbar">
 
-    <div id="content">
-        <script id="template" type="text/x-handlebars-template">
-
-            <nav class="navbar navbar-inverse navbar-fixed-top">
-                <div class="container inverse">
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
-                            <span class="sr-only">Toggle navigation</span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>
-                        <a class="navbar-brand" href="#">leohajder.github.io</a>
-                    </div>
-                    <div class="collapse navbar-collapse" id="navbar-collapse">
-                        <ul class="nav navbar-nav">
-                            <li><a href="#about">About Me</a></li>
-                            <li><a href="#github">GitHub</a></li>
-                            <li><a href="#music">Music</a></li>
-                            <li><a href="#contact">Contact</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-
-            <div class="container">
-
-                <div id="about" class="section">
-                    <h1 class="page-header">About Me</h1>
-                    <div class="container">
-                        <a href="img/leo.jpg" target="_blank"><img id="me" class="img img-circle pull-left" src="img/leo.jpg" height="150"></a>
-                        <p>
-                            My name is Leo Hajder. I am a
-                            {{#if age}}
-                                {{age}} year old
-                            {{/if}}
-                            programmer, musician and audio producer from Split, Croatia.
-                            {{#if job}}
-                                I am a {{job.title}} at <a href="{{job.site}}" target="_blank">{{job.company}}</a> in {{job.location}}.
-                            {{/if}}
-                        </p>
-                        <p>
-                            Whether in college or on my own, I have learned
-                            {{#skills}}
-                                <strong>{{skill}}</strong>
-                                {{#if subsets}}
-                                    <small>
-                                + 
-                                {{#subsets}}
-                                    {{this}}
-                                    {{#unless @last}}
-                                    , 
-                                    {{/unless}}
-                                {{/subsets}}
-                                </small>
-                                {{/if}}
-                                {{#unless @last}}
-                                    ,
-                                {{/unless}}
-                            {{/skills}}
-                            etc.
-                        </p>
-                        <p>
-                            I am a volunteer at <a href="http://www.facebook.com/udruga.srce" target="_blank">Srce</a>, a
-                            local cerebral palsy association in Split, Croatia. Our goal is the social integration of our
-                            members, improving their quality of life, organizing their free time, and participating in various
-                            art projects. Some of my tasks are guitar playing, video and audio content editing, assisting
-                            in project organization, social media promotion, etc.
-                        </p>
-                        <p>
-                            In my spare time I do music production and composing. I record, mix, produce and play guitar in local bands. I have also
-                            done a soundtrack for a documentary. I have participated in the
-                            <a href="http://deanrodneysingers.com/" target="_blank">Dean Rodney Singers</a> project, hosted
-                            by a London based company <a href="http://www.heartnsoul.co.uk/" target="_blank">Heart n Soul</a>,
-                            which brings musicians and artists with and without disabilities together to collaborate on artistic
-                            content. Our work was on display at the 2012 Summer Paralympics in London, UK.
-                        </p>
-                    </div>
-                </div>
-
-                <div id="certificates">
-                    <div class="container">
-                        <a href="docs/Leo_Hajder_CAE_Statement_Of_Result.pdf" target="_blank"><img src="img/cae.png" height="40" title="Cambridge Advanced English (CAE)">
-                        <a href="https://www.youracclaim.com/badges/4fbde96e-cd6b-48d1-8af1-38cf88980272/public_url" target="_blank"><img src="https://acclaim-production-app.s3.amazonaws.com/images/3ca8dd3f-ff4e-4961-b423-46ab9bcb053c/MTA%2BSoftware%2BDevelopment%2BFundamentals-01.png" height="40" title="MTA Software Development Fundamentals"></a>
-                        <a href="https://www.youracclaim.com/badges/818714e2-b7e3-4e54-a222-38af196d340f/public_url" target="_blank"><img src="https://acclaim-production-app.s3.amazonaws.com/images/7b186204-144b-4d7c-99d2-fef259500220/e3b2ef746594ace57b855a3aed8adc9f831dc09d.png" height="40" title="ClearFit Innovator"></a>
-                        <a href="docs/Leo_Hajder_Europass_CV.pdf" target="_blank" class="btn btn-primary">Download CV</a>
-                    </div>
-                </div>
-
-                <div id="github" class="section">
-                    <h1 class="page-header">GitHub</h1>
-                    <div class="container">
-                        {{#if repos.length}}
-                            <div class="row">
-                                {{#repos}}
-                                    <div class="col-xs-12">
-                                        <a href="{{html_url}}" target="_blank">{{name}}</a>
-                                        {{#if language}}
-                                            <small>{{language}}</small>
-                                        {{/if}}
-                                        {{#if fork}}
-                                            <i class="fa fa-code-fork"></i>
-                                        {{/if}}
-                                        {{#if homepage}}
-                                            <a href="{{homepage}}" target="_blank"><i class="fa fa-globe"></i></a>
-                                        {{/if}}
-                                        <div class="col-xs-12 repo-description">
-                                            {{description}}
-                                        </div>
-                                    </div>
-                                {{/repos}}
-                            </div>
-                        {{else}}
-                            <div class="text-danger">Cannot connect to GitHub API.</div>
-                        {{/if}}
-                    </div>
-                </div>
-
-                <div id="music" class="section">
-                    <h1 class="page-header">Music</h1>
-                    <div class="container">
-                        {{#music.urls}}
-                            <iframe src="{{this}}" frameborder="{{music.frameBorder}}"></iframe>
-                        {{/music.urls}}
-                    </div>
-                </div>
-
-                <div id="contact" class="section">
-                    <h1 class="page-header">Contact</h1>
-                    <div class="container">
-                        {{#contact}}
-                            <a href="{{url}}" target="_blank"><span class="label label-primary"><i class="fa {{icon}} fa-lg" aria-hidden="true"><span class="hidden-xs"> {{name}}</span></i></span></a>
-                        {{/contact}}
-                    </div>
-                </div>
-
-            </div>
-        </script>
-
-    </div>
+    <div id="content"></div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src='https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.min.js'></script>
     <script src="https://use.fontawesome.com/e89e59ee90.js"></script>
-    <script src="main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.min.js" integrity="sha256-0JaDbGZRXlzkFbV8Xi8ZhH/zZ6QQM0Y3dCkYZ7JYq34=" crossorigin="anonymous"></script>
+    <script src="min/js/template.min.js"></script>
+    <script src="min/js/main.min.js"></script>
 </body>
 
 </html>
