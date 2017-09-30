@@ -6,10 +6,6 @@ iframe {
     padding: 4px;
 }
 
-#github small, #about strong {
-    color: #ccc;
-}
-
 .section {
     padding-top: 40px;
 }
@@ -22,6 +18,15 @@ iframe {
     padding: 14px;
 }
 
+#about strong, #github small {
+    color: #ccc;
+}
+
 #certificates {
     padding: 10px;
+}
+
+#contact a {
+    margin-right: 2px;
+    text-decoration: none;
 }
