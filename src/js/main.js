@@ -34,6 +34,8 @@ var data = {
     skill: 'SQL'
   }, {
     skill: 'Git'
+  }, {
+    skill: 'MongoDB'
   }],
   music: {
     urls: [
