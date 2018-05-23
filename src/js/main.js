@@ -13,30 +13,57 @@ var data = {
     site: 'https://www.moj-posao.net',
     location: 'Zagreb, Croatia'
   },
-  skills: [{
-    skill: 'PHP',
-    subsets: ['Symfony', 'Sylius']
-  }, {
-    skill: 'Python',
-    subsets: ['Django', 'Tkinter']
-  }, {
-    skill: 'JavaScript',
-    subsets: ['jQuery', 'AJAX', 'Handlebars.js']
-  }, {
-    skill: 'C#',
-    subsets: ['Windows Forms', 'ASP.Net MVC']
-  }, {
-    skill: 'HTML',
-    subsets: ['Bootstrap', 'Semantic UI', 'Font Awesome']
-  }, {
-    skill: 'CSS'
-  }, {
-    skill: 'SQL'
-  }, {
-    skill: 'Git'
-  }, {
-    skill: 'MongoDB'
-  }],
+  skills: [
+    {
+      skill: 'PHP',
+      subsets: [
+        'Symfony', 
+        'Sylius',
+      ]
+    }, 
+    {
+      skill: 'Python',
+      subsets: [
+        'Django', 
+        'Tkinter',
+      ]
+    }, 
+    {
+      skill: 'C#',
+      subsets: [
+        'Windows Forms', 
+        'ASP.Net MVC',
+      ]
+    }, 
+    {
+      skill: 'JavaScript',
+      subsets: [
+        'jQuery',
+      ]
+    }, 
+    {
+      skill: 'HTML & CSS',
+      subsets: [
+        'Bootstrap', 
+        'Twig',
+        'Jinja',
+        'Handlebars.js',
+        'Semantic UI',
+      ]
+    }, 
+    {
+      skill: 'databases & ORMs',
+      subsets: [
+        'MySQl',
+        'MS SQL Server',
+        'MongoDB',
+        'Doctrine',
+      ]
+    }, 
+    {
+      skill: 'Git'
+    }
+  ],
   music: {
     urls: [
       'https://www.youtube.com/embed/videoseries?list=PLEC1A7D5D8F5E7203',
@@ -50,39 +77,48 @@ var data = {
     ],
     frameBorder: '0'
   },
-  contact: [{
-    name: 'email',
-    url: 'mailto:leohajder@gmail.com',
-    icon: 'fa-envelope-o'
-  }, {
-    name: 'github',
-    url: 'https://github.com/leohajder',
-    icon: 'fa-github'
-  }, {
-    name: 'linkedin',
-    url: 'http://www.linkedin.com/in/leohajder',
-    icon: 'fa-linkedin'
-  }, {
-    name: 'freecodecamp',
-    url: 'https://www.freecodecamp.com/leohajder',
-    icon: 'fa-free-code-camp'
-  }, {
-    name: 'codepen',
-    url: 'https://codepen.io/leohajder/',
-    icon: 'fa-codepen'
-  }, {
-    name: 'facebook',
-    url: 'https://www.facebook.com/leohajder',
-    icon: 'fa-facebook'
-  }, {
-    name: 'youtube',
-    url: 'https://www.youtube.com/c/leohajder',
-    icon: 'fa-youtube-play'
-  }, {
-    name: 'lastfm',
-    url: 'https://www.last.fm/user/leohajder',
-    icon: 'fa-lastfm'
-  }],
+  contact: [
+    {
+      name: 'email',
+      url: 'mailto:leohajder@gmail.com',
+      icon: 'fa-envelope-o'
+    }, 
+    {
+      name: 'github',
+      url: 'https://github.com/leohajder',
+      icon: 'fa-github'
+    }, 
+    {
+      name: 'linkedin',
+      url: 'http://www.linkedin.com/in/leohajder',
+      icon: 'fa-linkedin'
+    }, 
+    {
+      name: 'freecodecamp',
+      url: 'https://www.freecodecamp.com/leohajder',
+      icon: 'fa-free-code-camp'
+    }, 
+    {
+      name: 'codepen',
+      url: 'https://codepen.io/leohajder/',
+      icon: 'fa-codepen'
+    }, 
+    {
+      name: 'facebook',
+      url: 'https://www.facebook.com/leohajder',
+      icon: 'fa-facebook'
+    }, 
+    {
+      name: 'youtube',
+      url: 'https://www.youtube.com/c/leohajder',
+      icon: 'fa-youtube-play'
+    }, 
+    {
+      name: 'lastfm',
+      url: 'https://www.last.fm/user/leohajder',
+      icon: 'fa-lastfm'
+    }
+  ],
   repos: null
 }
 
