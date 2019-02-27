@@ -86,7 +86,7 @@
                 {{#if repos.length}}
                     <div class="row">
                         {{#repos}}
-                            <div class="col-lg-4 card">
+                            <div class="col-lg-4 col-md-6 card">
                                 <div class="card-body">
                                     <h5 class="card-title">{{name}}</h5>
                                     <h6 class="card-subtitle mb-2 text-muted">
@@ -110,7 +110,7 @@
             <h1 class="page-header">Music</h1>
             <div class="container">
                 {{#music.urls}}
-                    <div class="col-lg-4 card">
+                    <div class="col-lg-4 col-md-6 card">
                         <div class="card-body">
                             <iframe src="{{this}}" frameborder="{{music.frameBorder}}"></iframe>
                         </div>
