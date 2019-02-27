@@ -110,7 +110,11 @@
             <h1 class="page-header">Music</h1>
             <div class="container">
                 {{#music.urls}}
-                    <iframe src="{{this}}" frameborder="{{music.frameBorder}}"></iframe>
+                    <div class="col-lg-4 card">
+                        <div class="card-body">
+                            <iframe src="{{this}}" frameborder="{{music.frameBorder}}"></iframe>
+                        </div>
+                    </div>
                 {{/music.urls}}
             </div>
         </div>
