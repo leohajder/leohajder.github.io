@@ -86,21 +86,16 @@
                 {{#if repos.length}}
                     <div class="row">
                         {{#repos}}
-                            <div class="col-xs-12">
-                                <a href="{{html_url}}" target="_blank">{{name}}</a>
-                                {{#if language}}
-                                    <small>{{language}}</small>
-                                {{/if}}
-                                {{#if fork}}
-                                    <i class="fa fa-code-fork"></i>
-                                {{/if}}
-                                {{#if homepage}}
-                                    <a href="{{homepage}}" target="_blank">
-                                        <i class="fa fa-globe"></i>
-                                    </a>
-                                {{/if}}
-                                <div class="col-xs-12 repo-description">
-                                    {{description}}
+                            <div class="col-lg-4 card">
+                                <div class="card-body">
+                                    <h5 class="card-title">{{name}}</h5>
+                                    <h6 class="card-subtitle mb-2 text-muted">
+                                        {{#if language}}{{language}}{{else}}&nbsp;{{/if}}
+                                        {{#if fork}}<i class="fa fa-code-fork"></i>{{/if}}
+                                    </h6>
+                                    <p class="card-text">{{substr "150" description}}</p>
+                                    {{#if html_url}}<a href="{{html_url}}" target="_blank" class="card-link">View repository</a>{{/if}}
+                                    {{#if homepage}}| <a href="{{homepage}}" target="_blank" class="card-link">View live</a>{{/if}}
                                 </div>
                             </div>
                         {{/repos}}
