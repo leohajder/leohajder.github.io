@@ -35,40 +35,26 @@
         <div class="container">
             <a href="img/leo.jpg" target="_blank"><img id="me" class="img img-circle pull-left" src="img/leo.jpg" height="150"></a>
             <p>
-                My name is Leo Hajder. I am a
-                {{#if age}}
-                    {{age}}
-                    year old
-                {{/if}}
-                programmer, musician and audio producer from Split, Croatia.
+                My name is Leo Hajder. I am a{{#if age}} {{age}} year old{{/if}} programmer, musician and audio producer from Split, Croatia.
                 {{#if job}}
-                    I am a
-                    {{job.title}}
-                    at
-                    <a href="{{job.site}}" target="_blank">{{job.company}}</a>
-                    in
-                    {{job.location}}.
+                    I am a {{job.title}} at <a href="{{job.site}}" target="_blank">{{job.company}}</a> in {{job.location}}.
                 {{/if}}
             </p>
             <p>
-                Whether in college or on my own, I have learned
+                I have learned and have some experience in
                 {{#skills}}
                     <strong>{{skill}}</strong>
                     {{#if subsets}}
                         <small>
-                            +
+                            + 
                             {{#subsets}}
-                                {{this}}
-                                {{#unless @last}}
-                                    ,
-                                {{/unless}}
-                            {{/subsets}}
+                                {{this~}}
+                                {{~#unless @last~}},{{~/unless~}}
+                            {{/subsets~}}
                         </small>
-                    {{/if}}
-                    {{#unless @last}}
-                        ,
-                    {{/unless}}
-                {{/skills}}
+                    {{~/if~}}
+                    {{~#unless @last~}},{{~/unless~}}
+                {{/skills~}}
                 etc.
             </p>
             <p>
@@ -100,21 +86,16 @@
                 {{#if repos.length}}
                     <div class="row">
                         {{#repos}}
-                            <div class="col-xs-12">
-                                <a href="{{html_url}}" target="_blank">{{name}}</a>
-                                {{#if language}}
-                                    <small>{{language}}</small>
-                                {{/if}}
-                                {{#if fork}}
-                                    <i class="fa fa-code-fork"></i>
-                                {{/if}}
-                                {{#if homepage}}
-                                    <a href="{{homepage}}" target="_blank">
-                                        <i class="fa fa-globe"></i>
-                                    </a>
-                                {{/if}}
-                                <div class="col-xs-12 repo-description">
-                                    {{description}}
+                            <div class="col-lg-4 col-md-6 card">
+                                <div class="card-body">
+                                    <h5 class="card-title">{{name}}</h5>
+                                    <h6 class="card-subtitle mb-2 text-muted">
+                                        {{#if language}}{{language}}{{else}}&nbsp;{{/if}}
+                                        {{#if fork}}<i class="fa fa-code-fork"></i>{{/if}}
+                                    </h6>
+                                    <p class="card-text">{{substr "150" description}}</p>
+                                    {{#if html_url}}<a href="{{html_url}}" target="_blank" class="card-link">View repository</a>{{/if}}
+                                    {{#if homepage}}| <a href="{{homepage}}" target="_blank" class="card-link">View live</a>{{/if}}
                                 </div>
                             </div>
                         {{/repos}}
@@ -129,7 +110,11 @@
             <h1 class="page-header">Music</h1>
             <div class="container">
                 {{#music.urls}}
-                    <iframe src="{{this}}" frameborder="{{music.frameBorder}}"></iframe>
+                    <div class="col-lg-4 col-md-6 card">
+                        <div class="card-body">
+                            <iframe src="{{this}}" frameborder="{{music.frameBorder}}"></iframe>
+                        </div>
+                    </div>
                 {{/music.urls}}
             </div>
         </div>
