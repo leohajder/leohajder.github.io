@@ -1,11 +1,15 @@
 /* global $, Handlebars */
 
 Handlebars.registerHelper('substr', function (length, context, options) {
-  if (context.length > length) {
-    return context.substring(0, length) + "...";
-  }
+  if (context) {
+    if (context.length > length) {
+      return context.substring(0, length) + "...";
+    }
 
-  return context;
+    return context;
+  }
+  
+  return null;
 });
 
 var template = Handlebars.templates['template']
