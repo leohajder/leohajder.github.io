@@ -10,8 +10,8 @@ iframe {
     padding-top: 40px;
 }
 
-.repo-description {
-    padding: 2px 0 6px 10px;
+.card {
+    padding-bottom: 10px;
 }
 
 #me {
