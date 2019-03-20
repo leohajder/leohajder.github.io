@@ -22,7 +22,10 @@ $(function () {
     async: false
   }).done(function (contextDataResponse) {
     contextData = JSON.parse(contextDataResponse)
-    contextData.age = new Date(new Date() - new Date(contextData.birthDate)).getFullYear() - 1970
+
+    if (contextData.birthDate) {
+      contextData.age = new Date(new Date() - new Date(contextData.birthDate)).getFullYear() - 1970
+    }
   })
 
   $.ajax({
