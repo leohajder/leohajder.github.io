@@ -3,7 +3,7 @@
 Handlebars.registerHelper('substr', function (length, context, options) {
   if (context) {
     if (context.length > length) {
-      return context.substring(0, length) + "...";
+      return context.substring(0, length) + '...';
     }
 
     return context
