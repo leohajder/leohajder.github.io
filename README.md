@@ -13,7 +13,7 @@ My personal website with a short CV, portfolio and social media links.
 
 ## How it works
 
-JSON data, some of which we get via AJAX, gets passed to and templated by Handlebars.js. I have precompiled the Handlebars templates to javascript, and set up automatic on-save minification of .js and .css files via the [atom-minify](https://atom.io/packages/atom-minify) plugin for [Atom](https://atom.io/).
+JSON data, some of which we get via AJAX, gets passed to and templated by Handlebars.js. I have precompiled the Handlebars templates to javascript and minified files with the [Minify plugin for VSCode](https://marketplace.visualstudio.com/items?itemName=HookyQR.minify). There is no database, so I put all dynamic data in a json file on a GitHub gist and get the data via AJAX. Just make sure you get the latest file and **not some revision**. Just add `/raw` to the gist url.
 
 ## Create your own GitHub page
 
