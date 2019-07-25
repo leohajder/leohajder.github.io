@@ -11,18 +11,10 @@
         </div>
         <div class="collapse navbar-collapse" id="navbar-collapse">
             <ul class="nav navbar-nav">
-                <li>
-                    <a href="#about">About Me</a>
-                </li>
-                <li>
-                    <a href="#github">GitHub</a>
-                </li>
-                <li>
-                    <a href="#music">Music</a>
-                </li>
-                <li>
-                    <a href="#contact">Contact</a>
-                </li>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#github">GitHub</a></li>
+                <li><a href="#music">Music</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
     </div>
@@ -46,14 +38,12 @@
                     <strong>{{skill}}</strong>
                     {{#if subsets}}
                         <small>
-                            + 
+                            +
                             {{#subsets}}
-                                {{this~}}
-                                {{~#unless @last~}},{{~/unless~}}
+                                {{this~}}{{~#unless @last~}},{{~/unless~}}
                             {{/subsets~}}
                         </small>
-                    {{~/if~}}
-                    {{~#unless @last~}},{{~/unless~}}
+                    {{~/if~}}{{~#unless @last~}},{{~/unless~}}
                 {{/skills~}}
                 etc.
             </p>
@@ -73,78 +63,68 @@
 
     <div id="certificates">
         <div class="container">
-            <a href="docs/Leo_Hajder_CAE_Statement_Of_Result.pdf" target="_blank"><img src="img/cae.png" height="40" title="Cambridge Advanced English (CAE)">
-                <a href="https://www.youracclaim.com/badges/4fbde96e-cd6b-48d1-8af1-38cf88980272/public_url" target="_blank"><img src="https://acclaim-production-app.s3.amazonaws.com/images/3ca8dd3f-ff4e-4961-b423-46ab9bcb053c/MTA%2BSoftware%2BDevelopment%2BFundamentals-01.png" height="40" title="MTA Software Development Fundamentals"></a>
-                <a href="https://www.youracclaim.com/badges/818714e2-b7e3-4e54-a222-38af196d340f/public_url" target="_blank"><img src="https://acclaim-production-app.s3.amazonaws.com/images/7b186204-144b-4d7c-99d2-fef259500220/e3b2ef746594ace57b855a3aed8adc9f831dc09d.png" height="40" title="ClearFit Innovator"></a>
-                <a href="docs/Leo_Hajder_Europass_CV.pdf" target="_blank" class="btn btn-primary">Download CV</a>
-            </div>
+            <a href="docs/Leo_Hajder_CAE_Statement_Of_Result.pdf" target="_blank"><img src="img/cae.png" height="40" title="Cambridge Advanced English (CAE)"></a>
+            <a href="https://www.youracclaim.com/badges/4fbde96e-cd6b-48d1-8af1-38cf88980272/public_url" target="_blank"><img src="https://acclaim-production-app.s3.amazonaws.com/images/3ca8dd3f-ff4e-4961-b423-46ab9bcb053c/MTA%2BSoftware%2BDevelopment%2BFundamentals-01.png" height="40" title="MTA Software Development Fundamentals"></a>
+            <a href="https://www.youracclaim.com/badges/818714e2-b7e3-4e54-a222-38af196d340f/public_url" target="_blank"><img src="https://acclaim-production-app.s3.amazonaws.com/images/7b186204-144b-4d7c-99d2-fef259500220/e3b2ef746594ace57b855a3aed8adc9f831dc09d.png" height="40" title="ClearFit Innovator"></a>
+            <a href="docs/Leo_Hajder_Europass_CV.pdf" target="_blank" class="btn btn-primary">Download CV</a>
         </div>
-
-        <div id="github" class="section">
-            <h1 class="page-header">GitHub</h1>
-            <div class="container">
-                {{#if repos}}
-                    <div class="row">
-                        {{#repos}}
-                            <div class="col-lg-4 col-md-6 card">
-                                <div class="card-body">
-                                    <h5 class="card-title">{{name}}</h5>
-                                    <h6 class="card-subtitle mb-2">
-                                        {{#if language}}
-                                            {{language}}
-                                        {{else}}
-                                            &nbsp;
-                                        {{/if}}
-                                        {{#if fork}}
-                                            <i class="fa fa-code-fork"></i>
-                                        {{/if}}
-                                    </h6>
-                                    {{#if description}}
-                                        <p class="card-text"></p>{{substr "150" description}}</p>
-                                    {{else}}
-                                        <p class="card-text text-muted"></p>&nbsp;</p>
-                                    {{/if}}
-                                    {{#if html_url}}
-                                        <a href="{{html_url}}" target="_blank" class="card-link">View repository</a>
-                                    {{/if}}
-                                    {{#if homepage}}
-                                        | <a href="{{homepage}}" target="_blank" class="card-link">View live</a>
-                                    {{/if}}
-                                </div>
-                            </div>
-                        {{/repos}}
-                    </div>
-                {{else}}
-                    <div class="text-danger">Cannot connect to GitHub API.</div>
-                {{/if}}
-            </div>
-        </div>
-
-        <div id="music" class="section">
-            <h1 class="page-header">Music</h1>
-            <div class="container">
-                {{#music.urls}}
-                    <div class="col-lg-4 col-md-6 card">
-                        <div class="card-body">
-                            <iframe src="{{this}}" frameborder="{{music.frameBorder}}"></iframe>
-                        </div>
-                    </div>
-                {{/music.urls}}
-            </div>
-        </div>
-
-        <div id="contact" class="section">
-            <h1 class="page-header">Contact</h1>
-            <div class="container">
-                {{#contact}}
-                    <a href="{{url}}" target="_blank">
-                        <span>
-                            <i class="{{icon}}" aria-hidden="true"></i>
-                            <span class="hidden-xs">{{name}}</span>
-                        </span>
-                    </a>
-                {{/contact}}
-            </div>
-        </div>
-
     </div>
+
+    <div id="github" class="section">
+        <h1 class="page-header">GitHub</h1>
+        <div class="container">
+            {{#if repos}}
+                <div class="row">
+                    {{#repos}}
+                        <div class="col-lg-4 col-md-6 card">
+                            <div class="card-body">
+                                <h5 class="card-title">{{name}}</h5>
+                                <h7 class="card-subtitle mb-2">
+                                    {{#if language}}{{language}}{{else}}&nbsp;{{/if}}
+                                    {{#if fork}}<i class="fa fa-code-fork"></i>{{/if}}
+                                </h7>
+                                {{#if description}}
+                                    <p class="card-text"></p>{{substr "150" description}}</p>
+                                {{else}}
+                                    <p class="card-text text-muted"></p>&nbsp;</p>
+                                {{/if}}
+                                {{#if html_url}}<a href="{{html_url}}" target="_blank" class="card-link">View repository</a>{{/if}}
+                                {{#if homepage}}| <a href="{{homepage}}" target="_blank" class="card-link">View live</a>{{/if}}
+                            </div>
+                        </div>
+                    {{/repos}}
+                </div>
+            {{else}}
+                <div class="text-danger">Cannot connect to GitHub API.</div>
+            {{/if}}
+        </div>
+    </div>
+
+    <div id="music" class="section">
+        <h1 class="page-header">Music</h1>
+        <div class="container">
+            {{#music.urls}}
+                <div class="col-lg-4 col-md-6 card">
+                    <div class="card-body">
+                        <iframe src="{{this}}" frameborder="{{music.frameBorder}}"></iframe>
+                    </div>
+                </div>
+            {{/music.urls}}
+        </div>
+    </div>
+
+    <div id="contact" class="section">
+        <h1 class="page-header">Contact</h1>
+        <div class="container">
+            {{#contact}}
+                <a href="{{url}}" target="_blank">
+                    <span>
+                        <i class="{{icon}}" aria-hidden="true"></i>
+                        <span class="hidden-xs">{{name}}</span>
+                    </span>
+                </a>
+            {{/contact}}
+        </div>
+    </div>
+
+</div>
