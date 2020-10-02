@@ -1,5 +1,5 @@
 <template>
     <div>
-        <h2>Under construction...</h2>
+        <h2>@todo</h2>
     </div>
 </template>
