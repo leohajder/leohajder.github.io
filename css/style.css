@@ -1,4 +1,5 @@
-body, .hijs {
+html, body, .hijs {
+    font-size: 100%;
     background: #282a36;
 }
 
