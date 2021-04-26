@@ -1,0 +1,15 @@
+body, .hijs {
+    background: #282a36;
+}
+
+a:link {
+    color: yellowgreen;
+}
+
+a:visited {
+    color: grey;
+}
+
+a:hover {
+    color: aqua;
+}
