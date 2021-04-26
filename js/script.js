@@ -1,9 +1,9 @@
-function replaceUrlsWithLinks (str)
+function replaceUrlsWithLinks(str)
 {
-    var newStr = '';
-    var splitContent = str.split('\n');
+    let newStr = '';
+    const splitContent = str.split('\n');
     splitContent.forEach((line) => {
-        var urlMatch = line.match(/\bhttps?\S+/gi);
+        const urlMatch = line.match(/\bhttps?\S+/gi);
         if (urlMatch) {
             const url = urlMatch[0];
             const linkTemplate = `<a href="__url__" target="_blank">__url__</a>`;
