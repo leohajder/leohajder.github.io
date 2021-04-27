@@ -20,8 +20,8 @@ function replaceUrlsWithLinks(str)
 }
 
 document.addEventListener('DOMContentLoaded', (event) => {
-    document.querySelectorAll('pre code').forEach((block) => {
-        hljs.highlightBlock(block);
-        block.innerHTML = replaceUrlsWithLinks(block.innerHTML);
+    document.querySelectorAll('pre code').forEach((element) => {
+        hljs.highlightElement(element);
+        element.innerHTML = replaceUrlsWithLinks(element.innerHTML);
     });
 });
