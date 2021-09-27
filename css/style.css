@@ -3,6 +3,12 @@ html, body, .hijs {
     background: #282a36;
 }
 
+body > pre > code > span.php-tag > span {
+    color: #8be9fd;
+    font-family: monospace;
+    font-weight: 700;
+}
+
 a:link {
     color: yellowgreen;
 }
