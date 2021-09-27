@@ -1,22 +1,14 @@
 function replaceUrlsWithLinks(str)
 {
-    let newStr = '';
-    const splitContent = str.split('\n');
-    splitContent.forEach((line) => {
-        const urlMatch = line.match(/\bhttps?\S+/gi);
-        if (urlMatch) {
-            const url = urlMatch[0];
-            const linkTemplate = `<a href="__url__" target="_blank">__url__</a>`;
-            const aTag = linkTemplate.replaceAll('__url__', url);
-            const preparedLine = line.replaceAll(url, aTag);
+    const urlMatches = str.match(/\bhttps?\S+/gi);
+    const linkTemplate = `<a href="__url__" target="_blank">__url__</a>`;
 
-            newStr += preparedLine + '\n';
-        } else {
-            newStr += line + '\n';
-        }
+    urlMatches.forEach((url) => {
+        const linkTag = linkTemplate.replaceAll('__url__', url);
+        str = str.replaceAll(url, linkTag);
     });
 
-    return newStr;
+    return str;
 }
 
 document.addEventListener('DOMContentLoaded', (event) => {
