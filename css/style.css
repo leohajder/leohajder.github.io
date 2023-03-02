@@ -9,14 +9,14 @@ body > pre > code > span.php-tag > span {
     font-weight: 700;
 }
 
-a:link {
+body > pre > code > a:link > span.hljs-comment, a:link {
     color: yellowgreen;
 }
 
-a:visited {
-    color: grey;
+body > pre > code > a:hover > span.hljs-comment, a:hover { 
+    color: aqua; 
 }
 
-a:hover {
-    color: aqua;
+body > pre > code > a:visited > span.hljs-comment, a:visited { 
+    color: grey; 
 }
