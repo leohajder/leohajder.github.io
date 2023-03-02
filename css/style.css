@@ -14,9 +14,9 @@ body > pre > code > a:link > span.hljs-comment, a:link {
 }
 
 body > pre > code > a:visited > span.hljs-comment, a:visited { 
-    color: grey; 
+    color: grey;
 }
 
 body > pre > code > a:hover > span.hljs-comment, a:hover { 
-    color: aqua; 
+    color: aqua;
 }
